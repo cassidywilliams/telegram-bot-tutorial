@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - bot
+  - --region=europe-west1
+  - --source=.
+  - --trigger-http
+  - --runtime=python37
+  - --set-secrets=TELEGRAM_TOKEN=TELEGRAM_TOKEN:latest
